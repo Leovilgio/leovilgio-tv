@@ -1,0 +1,3 @@
+#EXTM3U
+#EXTINF:0 type="stream" channelId="-1" group="Nacional" logo="https://upload.wikimedia.org/wikipedia/pt/7/79/Logotipo_de_2023_da_TV_Miramar.png?utm_source=pt.wikipedia.org&utm_campaign=index&utm_content=original", Miramar
+https://cdn.mycloudstream.io/hls/live/broadcast/8xdonf9w/index.m3u8
