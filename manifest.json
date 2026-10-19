@@ -1,0 +1,24 @@
+{
+  "id": "com.leovilgio.tv",
+  "version": "1.0.1",
+  "name": "Leovilgio TV",
+  "description": "Canais de TV de Leovilgio - Nacional, Internacional, Animes, Animação, Desporto e mais. Total: 119 canais.",
+  "logo": "https://www.stremio.com/website/stremio-logo-small.png",
+  "resources": ["catalog", "meta", "stream"],
+  "types": ["tv"],
+  "idPrefixes": ["leovilgio:"],
+  "catalogs": [
+    {
+      "type": "tv",
+      "id": "leovilgio",
+      "name": "Leovilgio TV",
+      "extra": [
+        {
+          "name": "genre",
+          "isRequired": false,
+          "options": ["Animação", "Animes", "Desporto", "Filmes & Séries", "Gaming", "Internacional", "Músicas", "Nacional", "Notícias", "Novelas"]
+        }
+      ]
+    }
+  ]
+}
