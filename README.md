@@ -1,58 +1,60 @@
 # Leovilgio TV - Stremio Addon
 
-Addon Stremio com a playlist de canais TV fornecida.
+Addon Stremio com 119 canais de TV (Nacional, Internacional, Animes, Animação, Filmes & Séries, Notícias, Desporto, Músicas, Novelas, Gaming).
 
-**Nome:** Leovilgio TV  
-**Canais:** 119  
-**Categorias:** Nacional, Internacional, Animes, Animação, Filmes & Séries, Notícias, Desporto, Músicas, Novelas, Gaming
+## Instalação rápida
 
-## Como instalar / usar
+### 1. Deploy no Render.com (recomendado - gratuito)
 
-### Opção 1: Rodar localmente (mais fácil para testar)
-
-1. Instale Node.js (v14+)
-2. Entre na pasta:
-   ```bash
-   cd leovilgio-tv
-   npm install
-   npm start
+1. Acesse https://dashboard.render.com e faça login (ou crie conta)
+2. Clique em **New +** → **Web Service**
+3. Conecte o repositório: **Leovilgio/leovilgio-tv**
+4. Configurações:
+   - **Name**: leovilgio-tv (ou qualquer nome)
+   - **Runtime**: Node
+   - **Build Command**: `npm install`
+   - **Start Command**: `npm start`
+5. Clique em **Create Web Service**
+6. Aguarde o deploy (1-2 minutos)
+7. Copie a URL do serviço (ex: `https://leovilgio-tv.onrender.com`)
+8. No Stremio, adicione o addon com:
    ```
-3. No Stremio, adicione o addon com a URL:
+   https://SEU-APP.onrender.com/manifest.json
    ```
-   http://127.0.0.1:7000/manifest.json
-   ```
-   (Se estiver em outro dispositivo na mesma rede, use o IP do computador)
 
-### Opção 2: Deploy gratuito (recomendado para usar em qualquer lugar)
+### 2. Rodar localmente
 
-#### Render.com (fácil e gratuito)
+```bash
+git clone https://github.com/Leovilgio/leovilgio-tv.git
+cd leovilgio-tv
+npm install
+npm start
+```
 
-1. Crie conta em https://render.com
-2. New → Web Service
-3. Conecte este repositório GitHub
-4. Build Command: `npm install`
-5. Start Command: `npm start`
-6. Depois de publicar, use a URL: `https://SEU-APP.onrender.com/manifest.json`
+No Stremio adicione: `http://127.0.0.1:7000/manifest.json`
 
-#### Railway.app
+### 3. Railway.app
 
 1. https://railway.app → New Project → Deploy from GitHub
-2. Selecione este repositório
-3. Railway detecta Node.js automaticamente
-4. Use a URL gerada + `/manifest.json`
+2. Selecione o repositório leovilgio-tv
+3. Use a URL gerada + `/manifest.json`
 
-#### Outras opções
-- Vercel / Netlify (precisa adaptar para serverless)
-- Qualquer VPS ou servidor Node.js
+## Categorias
 
-## Estrutura
-
-- `index.js` - Addon principal
-- `channels.json` - Lista de canais parseada do M3U
-- `package.json`
+- Nacional
+- Internacional
+- Animes
+- Animação
+- Filmes & Séries
+- Notícias
+- Desporto
+- Músicas
+- Novelas
+- Gaming
 
 ## Atualizar a playlist
 
-Substitua o `channels.json` ou edite o M3U original e re-rode o parser.
+Substitua o arquivo `playlist.m3u` e faça commit + push. O addon recarrega automaticamente no próximo restart.
 
-Criado com ❤️ para Leovilgio TV
+---
+Criado para Leovilgio TV

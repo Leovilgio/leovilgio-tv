@@ -1,6 +1,6 @@
 {
   "name": "leovilgio-tv",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Leovilgio TV Stremio Addon",
   "main": "index.js",
   "scripts": {
